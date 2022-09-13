@@ -16,18 +16,13 @@ client.on('interactionCreate', async interaction => {
 	const { commandName } = interaction;
 
 	if (commandName === 'ping') {
-		await interaction.reply('Pong!');
+		await interaction.reply('> Pong!');
 	}
 	else if (commandName === 'serverinfo') {
-		await interaction.reply(`Server name: ${interaction.guild.name} \
-									Server owner: ${interaction.guild.ownerId} \
-									Total members: ${interaction.guild.memberCount} \
-									Online: ${(interaction.guild.members.cache.filter(member => member.presence.status !== 'offline').size)} \
-									Server created: ${interaction.guild.createdAt}`);
+		await interaction.reply(`> **Server name:** ${interaction.guild.name}\n> **Server owner**: ${(await interaction.guild.fetchOwner()).user.username}\n > **Total members:** ${interaction.guild.memberCount}\n> **Server created:** ${interaction.guild.createdAt}\n`);
 	}
 	else if (commandName === 'userinfo') {
-		await interaction.reply(`Your tag: ${interaction.user.tag}\
-									Your id: ${interaction.user.id}`);
+		await interaction.reply(`> **Your tag:** ${interaction.user.tag}\n> **Your id:** ${interaction.user.id}\n`);
 	}
 });
 
