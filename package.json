@@ -1,0 +1,22 @@
+{
+  "name": "multiversal-time",
+  "version": "1.0.0",
+  "description": "A time-bound discord bot.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "time",
+    "timezone"
+  ],
+  "author": "Hubris",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1"
+  }
+}
