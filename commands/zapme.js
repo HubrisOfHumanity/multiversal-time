@@ -5,7 +5,7 @@ module.exports = {
 		.setName('zapme')
 		.setDescription('Sends a bolt of electricity your way!'),
 	async execute(interaction) {
-		await interaction.reply('> *Zap!*');
+		await interaction.reply(`> <@${interaction.user.id}>\n*Zap!*`);
 		return;
 	},
 };
